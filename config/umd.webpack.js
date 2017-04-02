@@ -31,9 +31,9 @@ let babelOptions = {
 
 module.exports = {
     entry: {
-        container: path.join(process.cwd(), 'src/subatomic/layout/container.vue'),
-        row: path.join(process.cwd(), 'src/subatomic/layout/row.vue'),
-        column: path.join(process.cwd(), 'src/subatomic/layout/column.vue')
+        'subatomic-layout-container': path.join(process.cwd(), 'src/subatomic/layout/container.vue'),
+        'subatomic-layout-row': path.join(process.cwd(), 'src/subatomic/layout/row.vue'),
+        'subatomic-layout-column': path.join(process.cwd(), 'src/subatomic/layout/column.vue')
     },
     output: {
         path: path.join(process.cwd(), 'dist'),
