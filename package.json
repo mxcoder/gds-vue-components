@@ -1,5 +1,11 @@
 {
-  "dependencies": {
-    "vue-cli": "^2.8.1"
-  }
+    "scripts": {
+        "default": "vue build --host 0.0.0.0 --config config/base.vue-build.js App.vue",
+        "single-umd": "vue build --lib --prod --config config/single-umd.vue-build.js",
+        "all-umd": "webpack --config config/umd.webpack.js"
+    },
+    "dependencies": {
+        "vue-cli": "^2.8.1",
+        "webpack": "^2.2.0"
+    }
 }

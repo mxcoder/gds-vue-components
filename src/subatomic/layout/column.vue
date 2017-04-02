@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'Column',
+    name: 'column',
     props: {
         xs: {default: 12},
         sm: {default: false},

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDS Layout</title>
+    <link rel="stylesheet" href="https://ds.gumgum.com/stable/theme-blue.css">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../../../dist/container.js"></script>
+    <script src="../../../dist/row.js"></script>
+    <script src="../../../dist/column.js"></script>
+</head>
+<body>
+    <div id="app">
+        <container>
+            <row>
+                <column sm="6">
+                    <div>Hello</div>
+                </column>
+                <column sm="6">
+                    <div>World</div>
+                </column>
+            </row>
+        </container>
+    </div>
+    <script>
+        Vue.component('container', gds.container);
+        Vue.component('row', gds.row);
+        Vue.component('column', gds.column);
+        new Vue({ el: '#app' });
+    </script>
+</body>
+</html>

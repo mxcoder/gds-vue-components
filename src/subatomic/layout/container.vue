@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'LayoutContainer',
+    name: 'container',
     props: {
         className: {
             default: '',
