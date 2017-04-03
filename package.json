@@ -1,10 +1,9 @@
 {
     "scripts": {
         "default": "vue build --host 0.0.0.0 --config config/base.vue-build.js App.vue",
-        "single-umd": "vue build --lib --prod --config config/single-umd.vue-build.js",
-        "all-umd": "webpack --config config/umd.webpack.js",
         "play": "vbuild --host 0.0.0.0 -c config/play.config.js -d",
-        "build:play": "vbuild -c config/play.config.js"
+        "build:play": "vbuild -c config/play.config.js",
+        "build:umd": "webpack --config config/umd.webpack.js"
     },
     "dependencies": {
         "vue-cli": "^2.8.1",

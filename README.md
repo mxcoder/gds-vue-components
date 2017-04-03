@@ -14,7 +14,8 @@ Run:
 
 - `yarn default` : for HMR dev env using App.vue as entry
 - `yarn play` : for vue-play env
-- `yarn all-umd` : for UMD libraries build
+- `yarn build:play` : to build vue-play static in build-play/
+- `yarn build:umd` : to build UMD libraries in build-umd/
 
 Use as Vue (.vue) dependencies
 ------------------------------
