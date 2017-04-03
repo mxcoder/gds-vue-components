@@ -2,10 +2,10 @@
     <container>
         <row>
             <column sm="6">
-                <div>Hello</div>
+                <div>Hello <badge :inverse="true">10</badge> </div>
             </column>
             <column sm="6">
-                <div>World</div>
+                <div>World <badge type="danger">10</badge> <badge></badge> </div>
             </column>
         </row>
     </container>
@@ -15,6 +15,7 @@
 import container from 'Components/subatomic/layout/container';
 import column from 'Components/subatomic/layout/column';
 import row from 'Components/subatomic/layout/row';
+import badge from 'Components/atoms/badge';
 
 export default {
     name: 'App',
@@ -25,7 +26,8 @@ export default {
     components: {
         container,
         column,
-        row
+        row,
+        badge,
     }
 };
 </script>
