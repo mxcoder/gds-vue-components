@@ -1,6 +1,6 @@
 <template>
     <div class="gds-layout__container">
-        <gds-button state="primary" @click="onClick" :data-something="something">Click me</gds-button>
+        <gds-button context="primary" @click="onClick" :data-something="something">Click me</gds-button>
     </div>
 </template>
 

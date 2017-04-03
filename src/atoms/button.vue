@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import {ui_states, ui_breakpoints} from 'System';
+import {ui_contexts, ui_breakpoints} from 'System';
 
 const baseclass = 'gds-button';
 
@@ -12,10 +12,10 @@ const displays = ['link', 'block'];
 export default {
     name: 'gds-button',
     props: {
-        state: {
+        context: {
             type: String,
             validator: function(value) {
-                return (ui_states.indexOf(value) >= 0);
+                return (ui_contexts.indexOf(value) >= 0);
             }
         },
         size: {
@@ -34,8 +34,8 @@ export default {
     computed: {
         finalClassName: function() {
             let classList = [baseclass];
-            if (this.state) {
-                classList.push(`${baseclass}--${this.state}`);
+            if (this.context) {
+                classList.push(`${baseclass}--${this.context}`);
             } else {
                 classList.push(`${baseclass}--default`);
             }

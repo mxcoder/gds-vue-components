@@ -1,9 +1,9 @@
 <template>
     <div class="gds-layout__container">
-        <gds-button @click="openModal" state="primary">Open Modal</gds-button>
+        <gds-button @click="openModal" context="primary">Open Modal</gds-button>
         <gds-modal uid="modal-default" :shown="modal" v-on:close="closeModal" v-on:esc="closeModal">
             <div slot="footer">
-                <gds-button state="danger" @click="closeModal">Cancel</gds-button>
+                <gds-button context="danger" @click="closeModal">Cancel</gds-button>
             </div>
         </gds-modal>
     </div>

@@ -13,17 +13,17 @@
             <gds-column md="6">
                 <gds-button @click="onButtonClick" data-id="Default"></gds-button>
                 <gds-button @click="onButtonClick" data-id="Disabled" disabled>Cant click me!</gds-button>
-                <gds-button @click="onButtonClick" data-id="Home" state="info"><span class="fa fa-home"></span> Home</gds-button>
+                <gds-button @click="onButtonClick" data-id="Home" context="info"><span class="fa fa-home"></span> Home</gds-button>
                 <span class="gds-tooltip--right" data-tooltip="I am a tooltip!">
-                    <gds-button @click="onButtonClick" @mouseover.native="onButtonHover" data-id="LinkMDWarning" display="link" size="md" state="warning">Hover me!</gds-button>
+                    <gds-button @click="onButtonClick" @mouseover.native="onButtonHover" data-id="LinkMDWarning" display="link" size="md" context="warning">Hover me!</gds-button>
                 </span>
                 <gds-container>
                     <p>Some paragraph in a container</p>
                 </gds-container>
             </gds-column>
             <gds-column md="6">
-                <gds-button @click="onButtonClick" data-id="BlockXLDanger" display="block" size="xl" state="danger">AH! Click me!</gds-button>
-                <gds-button @click="onButtonClick" data-id="BlockXLPrimary" display="block" size="xl" state="primary">Yes. Click me!</gds-button>
+                <gds-button @click="onButtonClick" data-id="BlockXLDanger" display="block" size="xl" context="danger">AH! Click me!</gds-button>
+                <gds-button @click="onButtonClick" data-id="BlockXLPrimary" display="block" size="xl" context="primary">Yes. Click me!</gds-button>
             </gds-column>
         </gds-row>
         <gds-row>
@@ -36,10 +36,10 @@
         </gds-row>
         <gds-row>
             <gds-column all="6">
-                <gds-button display="block" size="lg" state="success" @click="modalA = true">Open Modal A</gds-button>
+                <gds-button display="block" size="lg" context="success" @click="modalA = true">Open Modal A</gds-button>
             </gds-column>
             <gds-column all="6">
-                <gds-button display="block" size="lg" state="info" @click="modalB = true">Open Modal B</gds-button>
+                <gds-button display="block" size="lg" context="info" @click="modalB = true">Open Modal B</gds-button>
             </gds-column>
         </gds-row>
     </gds-layout-container>
@@ -47,7 +47,7 @@
     <gds-modal uid="modalB" :shown="modalB" title="Modal B" v-on:open="shoutEventType" v-on:close="shoutEventType" v-on:esc="shoutEventType">
         <p>This is the Modal B</p>
         <div slot="footer">
-            <gds-button display="block" state="danger" @click="modalB = false">Close modal</gds-button>
+            <gds-button display="block" context="danger" @click="modalB = false">Close modal</gds-button>
         </div>
     </gds-modal>
 </div>

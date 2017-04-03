@@ -5,17 +5,17 @@
 </template>
 
 <script>
-import {ui_states} from 'System';
+import {ui_contexts} from 'System';
 
 const baseclass = 'gds-badge';
 
 export default {
     name: 'gds-badge',
     props: {
-        state: {
+        context: {
             type: String,
             validator: function(value) {
-                return (ui_states.indexOf(value) >= 0);
+                return (ui_contexts.indexOf(value) >= 0);
             }
         },
         inverse: {
@@ -30,12 +30,12 @@ export default {
     computed: {
         finalClassName: function() {
             let classList = [baseclass];
-            if (this.state) {
-                classList.push(`${baseclass}--${this.state}`)
+            if (this.context) {
+                classList.push(`${baseclass}--${this.context}`)
             }
             if (this.inverse) {
-                if (this.state) {
-                    classList.push(`${baseclass}--${this.state}-inverse`);
+                if (this.context) {
+                    classList.push(`${baseclass}--${this.context}-inverse`);
                 } else {
                     classList.push(`${baseclass}--inverse`);
                 }
