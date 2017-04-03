@@ -1,5 +1,5 @@
 <template>
-    <button :class="finalClassName"><slot>Click Here</slot></button>
+    <button @click="nativeClick" :class="finalClassName"><slot>Click Here</slot></button>
 </template>
 
 <script>
@@ -46,6 +46,11 @@ export default {
                 classList.push(`${baseclass}--${this.display}`);
             }
             return classList;
+        }
+    },
+    methods: {
+        nativeClick: function(evt) {
+            this.$emit('click', evt);
         }
     }
 };

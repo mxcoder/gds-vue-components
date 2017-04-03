@@ -1,6 +1,10 @@
 let glob = require('glob');
 let path = require('path');
+
+let common = require(path.join(process.cwd(), 'config/common.config.js'));
+
 let webpack = require('webpack');
+
 let ProgressPlugin = require('webpack/lib/ProgressPlugin');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let loaders = require('vue-cli/lib/loaders');
@@ -56,10 +60,7 @@ module.exports = {
             process.cwd(),
             path.join(process.cwd(), 'node_modules'),
         ],
-        alias: {
-            Components: path.resolve(src_dir),
-            System: path.resolve(src_dir, 'system.js')
-        }
+        alias: common.webpack.resolve.alias
     },
     resolveLoader: {
         modules: [
