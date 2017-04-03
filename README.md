@@ -12,7 +12,7 @@ Run `yarn` to install deps
 
 Run:
 
-- `yarn default` : for HMR dev env
+- `yarn default` : for HMR dev env using App.vue as entry
 - `yarn play` : for vue-play env
 - `yarn all-umd` : for UMD libraries build
 
@@ -21,7 +21,7 @@ Use as Vue (.vue) dependencies
 
 In your package.json, include:
 ```
-"gds-vue-components": "git+ssh://git@github.org/gumgum/gds-vue-components.git"
+"gds-vue-components": "git+ssh://git@github.com:mxcoder/gds-vue-components.git"
 ```
 
 In your .vue files import them as:
