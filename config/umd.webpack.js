@@ -7,6 +7,8 @@ let loaders = require('vue-cli/lib/loaders');
 
 const production = false;
 
+const src_dir = path.join(process.cwd(), 'src');
+
 process.env.NODE_ENV = production ? 'production' : 'development';
 
 let cssOptions = {
@@ -29,12 +31,14 @@ let babelOptions = {
     ]
 }
 
+let entries = {};
+glob.sync('**/*.vue', { cwd: src_dir }).forEach(function(fp) {
+    let key = path.basename(fp.replace(/\//g, '-'), '.vue');
+    entries[key] = path.join(src_dir, fp);
+});
+
 module.exports = {
-    entry: {
-        'subatomic-layout-container': path.join(process.cwd(), 'src/subatomic/layout/container.vue'),
-        'subatomic-layout-row': path.join(process.cwd(), 'src/subatomic/layout/row.vue'),
-        'subatomic-layout-column': path.join(process.cwd(), 'src/subatomic/layout/column.vue')
-    },
+    entry: entries,
     output: {
         path: path.join(process.cwd(), 'dist'),
         filename: '[name].js',
@@ -53,7 +57,8 @@ module.exports = {
             path.join(process.cwd(), 'node_modules'),
         ],
         alias: {
-            Components: path.resolve(process.cwd(), 'src/')
+            Components: path.resolve(src_dir),
+            System: path.resolve(src_dir, 'system.js')
         }
     },
     resolveLoader: {

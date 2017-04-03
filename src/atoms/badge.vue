@@ -5,14 +5,17 @@
 </template>
 
 <script>
-const types = ['success', 'info', 'warning', 'danger'];
+import {ui_states} from 'System';
+
+const baseclass = 'gds-badge';
+
 export default {
-    name: 'badge',
+    name: 'gds-badge',
     props: {
-        type: {
+        state: {
             type: String,
             validator: function(value) {
-                return (types.indexOf(value) >= 0);
+                return (ui_states.indexOf(value) >= 0);
             }
         },
         inverse: {
@@ -26,19 +29,19 @@ export default {
     },
     computed: {
         finalClassName: function() {
-            let classList = ['gds-badge'];
-            if (this.type) {
-                classList.push(`gds-badge--${this.type}`)
+            let classList = [baseclass];
+            if (this.state) {
+                classList.push(`${baseclass}--${this.state}`)
             }
             if (this.inverse) {
-                if (this.type) {
-                    classList.push(`gds-badge--${this.type}-inverse`);
+                if (this.state) {
+                    classList.push(`${baseclass}--${this.state}-inverse`);
                 } else {
-                    classList.push(`gds-badge--inverse`);
+                    classList.push(`${baseclass}--inverse`);
                 }
             }
             if (this.empty || Object.keys(this.$slots).length === 0) {
-                classList.push(`gds-badge--empty`)
+                classList.push(`${baseclass}--empty`)
             }
             return classList;
         }

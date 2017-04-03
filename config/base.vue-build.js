@@ -8,7 +8,8 @@ module.exports = {
     webpack: {
         resolve: {
             alias: {
-                Components: path.resolve(process.cwd(), 'src/')
+                Components: path.resolve(process.cwd(), 'src/'),
+                System: path.resolve(process.cwd(), 'src/system.js')
             }
         }
     }

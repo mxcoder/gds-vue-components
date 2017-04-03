@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'row'
+    name: 'gds-row'
 };
 </script>
 

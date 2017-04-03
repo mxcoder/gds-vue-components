@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'container',
+    name: 'gds-container',
     props: {
         className: {
             default: '',

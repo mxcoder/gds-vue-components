@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -v $(pwd):/opt -w /opt -u `id -u $USER` -it -p 4000:4000 node /bin/bash
