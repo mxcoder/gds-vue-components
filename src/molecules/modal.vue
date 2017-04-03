@@ -44,7 +44,7 @@ let triggerOnEsc = function(evt) {
     if (evt.keyCode === ESC_KEY) {
         Object.keys(instances).forEach(function(uid) {
             if (instances[uid].$data.open) {
-                instances[uid].$emit('esc');
+                instances[uid].$emit('esc', {type: 'esc'});
             }
         });
     }

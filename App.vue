@@ -44,7 +44,7 @@
         </gds-row>
     </gds-layout-container>
     <gds-modal uid="modalA" :shown="modalA" title="Modal A" v-on:esc="modalA = false"></gds-modal>
-    <gds-modal uid="modalB" :shown="modalB" title="Modal B" v-on:open="shoutEventType" v-on:close="shoutEventType">
+    <gds-modal uid="modalB" :shown="modalB" title="Modal B" v-on:open="shoutEventType" v-on:close="shoutEventType" v-on:esc="shoutEventType">
         <p>This is the Modal B</p>
         <div slot="footer">
             <gds-button display="block" state="danger" @click="modalB = false">Close modal</gds-button>
