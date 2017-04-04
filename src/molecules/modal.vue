@@ -24,11 +24,12 @@ const ESC_KEY = 27;
 
 let instances = {};
 
+let body = window && window.document && window.document.body;
+
 // makes body modifications required by DS styles,
 // also attaches global ESC listener
 let applyHasModalToBody = function(state) {
-    if (window && window.document && window.document.body) {
-        let body = window.document.body;
+    if (body) {
         let bodyClasses = body.classList;
         if (state) {
             bodyClasses.add('-has-modal');
@@ -83,9 +84,12 @@ export default {
             open: false
         }
     },
-    beforeMount: function() {
+    mounted: function() {
         instances[this.uid] = this;
         this.open = this.shown;
+        if (body) {
+            body.prepend(this.$el);
+        }
     },
     watch: {
         shown: function(new_state) {
