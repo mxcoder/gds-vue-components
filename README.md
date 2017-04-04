@@ -1,7 +1,22 @@
 GumGum Design System - Vue compontents library
 ==============================================
 
-Reusable VueJS components for GDS
+Reusable VueJS components for the [GumGum Design System](https://ds.gumgum.com/stable/css/index.html)
+
+Template example
+----------------
+```html
+<gds-layout-container>
+    <gds-row>
+        <gds-column md="6">
+            <gds-button>Click here!</gds-button>
+        </gds-column>
+        <gds-column md="6">
+            <gds-button context="danger" @click="someAction">Don't click here</gds-button>
+        </gds-column>
+    </gds-row>
+</gds-layout-container>
+```
 
 Run locally
 -----------
@@ -66,3 +81,11 @@ Vue.component('gds-button', gds['atoms-button']);
 
 - Run `yarn && yarn all-umd`
 - Open in a browser: `tests/umd/index.html` with `file://` protocol
+
+TODO
+----
+
+* Determine UMD deploying hostname, maybe unpkg.com
+* Complete set of components
+* Complete set of playbooks
+* Add some basic tests on functionality and rendering
