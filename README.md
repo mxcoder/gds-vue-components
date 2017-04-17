@@ -77,6 +77,12 @@ or for global registration:
 Vue.component('gds-button', gds['atoms-button']);
 ```
 
+Note: You can find the UMD files deployed at `https://mxcoder.github.io/gds-vue-components/dist/umd/`,
+try with `https://mxcoder.github.io/gds-vue-components/dist/umd/all.js` which includes all the components prefixed with `gds-`/
+
+JSFiddle: https://jsfiddle.net/ricardoe/wentLu97/
+
+
 *For a quick check on UMD functionality:*
 
 - Run `yarn && yarn build:umd`
@@ -85,7 +91,6 @@ Vue.component('gds-button', gds['atoms-button']);
 TODO
 ----
 
-* Determine UMD deploying hostname, maybe unpkg.com
 * Complete set of components
 * Complete set of playbooks
 * Add some basic tests on functionality and rendering
