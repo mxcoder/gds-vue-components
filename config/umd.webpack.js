@@ -44,7 +44,7 @@ glob.sync('**/*.vue', { cwd: src_dir }).forEach(function(fp) {
 module.exports = {
     entry: entries,
     output: {
-        path: path.join(process.cwd(), 'dist-umd'),
+        path: path.join(process.cwd(), 'dist/umd'),
         filename: '[name].js',
         library: ['gds', '[name]'],
         libraryTarget: 'umd',

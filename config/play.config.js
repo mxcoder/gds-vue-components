@@ -6,7 +6,7 @@ module.exports = {
         app: 'play/app.js',
         preview: 'play/preview.js'
     },
-    dist: 'dist-play',
+    dist: 'dist/play',
     port: 4000,
     // compile Vue template
     templateCompiler: true,

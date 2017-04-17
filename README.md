@@ -79,7 +79,7 @@ Vue.component('gds-button', gds['atoms-button']);
 
 *For a quick check on UMD functionality:*
 
-- Run `yarn && yarn all-umd`
+- Run `yarn && yarn build:umd`
 - Open in a browser: `tests/umd/index.html` with `file://` protocol
 
 TODO
