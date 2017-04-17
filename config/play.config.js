@@ -24,5 +24,9 @@ module.exports = {
             template: path.join(process.cwd(), 'config/template.html')
         }
     ],
-    webpack: common.webpack
+    webpack: Object.assign(common.webpack, {
+        output: {
+            publicPath: ''
+        }
+    })
 }
