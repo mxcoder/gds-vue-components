@@ -6,8 +6,8 @@
         "build:umd": "webpack --config config/umd.webpack.js"
     },
     "dependencies": {
-        "vue-cli": "^2.8.1",
-        "webpack": "^2.2.0"
+        "vue-cli": "^2.9.0",
+        "webpack": "^2.3.3"
     },
     "devDependencies": {
         "raw-loader": "^0.5.1",
